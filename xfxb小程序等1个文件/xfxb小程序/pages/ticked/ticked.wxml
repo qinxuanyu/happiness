@@ -1,0 +1,57 @@
+<!-- 满减券 -->
+<view class='clearfix'>
+   <image class='state' src='../../images/home_coupon_help@2x.png' bindtap='couponPop_on'></image>
+</view>
+
+
+<view class="item yellow " wx:for="{{listDatas}}">
+   
+ 
+   
+    <block wx:if="{{item.type=='满减券'}}">
+      <image  src='../../images/home_coupon_bg_first@2x.png'></image>
+       <view class='left'>
+          <text>满减券</text>
+          <text>￥{{item.price }}</text>
+      </view>
+   </block>
+    <block wx:elif="{{item.type=='折扣券'}}">
+      <image src='../../images/home_coupon_bg_second@2x.png'></image>
+       <view class='left'>
+          <text>折扣券</text>
+          <text>{{item.price }}折</text>
+      </view>
+   </block>
+   <block wx:else>
+      <image   src='../../images/home_coupon_bg_third@2x.png'></image>
+       <view class='left'>
+          <text>代金券</text>
+          <text>￥{{item.price }}</text>
+      </view>
+   </block> 
+   <view class='middle'>
+       <text class='title'>{{item.priceDesc }}</text>
+       <text class='explain'>{{item.businessDesc }}</text>
+       <text class='time' wx:if="{{item.startTime!=null}}">{{item.startTime }}~{{item.endTime }}</text>
+       <text class='time' wx:else>永久</text>
+   </view>
+   <view type='button' class='right' id="{{item.id}}" bindtap='getTicked'>
+         领取
+   </view>
+</view>
+<view class='coupon pop' wx:if="{{couponPop}}">
+    <view class='top'>
+         <view class='icon'></view>
+         <view class='text' style='text-align:center;font-size:32rpx;color:#ff2d2e'>优惠券说明</view>
+         <text>1、购买商品时（除特例商品外），购物券可抵购物券券面显示的现金价值；
+2、原则上每张订单只能使用一张购物券，且不得与其他优惠方式同时使用；
+3、本券不得兑换现金不设找零；
+4、退货时，本券价值不予退还现金；
+5、使用时请向收银员展示二维码；
+最终解释权归深圳市特劳特品牌设计有限公司所有。</text>
+         
+    </view>
+    
+    <image class='off-btn' src='../../images/home_open_close@3x.png' bindtap='couponPop_off'></image>
+</view>
+<view class='layer' wx:if="{{couponPop}}" bindtap='popShow_off'></view>

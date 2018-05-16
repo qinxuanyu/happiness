@@ -1,0 +1,55 @@
+/* pages/qrcode/qrcode.wxss */
+
+
+
+.img-box {
+  padding: 32rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.img-box image {
+  width: 686rpx;
+  height: 686rpx;
+  background-color: #f9f9f9;
+}
+
+.input-row {
+  margin: 30rpx auto;
+  display: flex;
+  align-items: center;
+  height: 88rpx;
+  padding: 0 32rpx;
+  background-color: #fff;
+  font-size: 34rpx;
+  color: #000;
+}
+
+.input-row input {
+  margin-left: 100rpx;
+  flex: 1;
+}
+
+.qrcInput {
+  border: 1rpx solid #e5e5e5;
+  
+}
+
+.genQrcBtn {
+  width: 686rpx;
+  margin: 60rpx auto;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.title{line-height: 185rpx;text-align: center;background-color: #fff}
+.explain{background-color: #fff;padding: 40rpx 60rpx;}
+.explain text{display: block;}
+.explain text:nth-child(1){color: #999;border: 1px das;}

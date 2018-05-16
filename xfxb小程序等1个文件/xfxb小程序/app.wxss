@@ -1,0 +1,10 @@
+page{
+  background-color: #f5f5f5;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

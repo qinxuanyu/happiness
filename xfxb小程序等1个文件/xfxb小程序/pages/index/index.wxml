@@ -1,0 +1,76 @@
+<scroll-view scroll-y="true" bindscrolltolower="pulUp" style='height:100%' lower-threshold="50">
+    <swiper indicatorDots= "false" class='swiper'
+        autoplay= "false"
+        interval= "5000"
+        duration= "500" 
+        indicator-color="#ffffff" 
+        indicator-active-color="#ffdd27" 
+        style='height:424rpx;' 
+        >
+      <block wx:for="{{banner}}">
+        <swiper-item>
+          <image src="{{item.imageUrl}}" mode="scaleToFill"  bindload="imageLoad" class="slide-image" style='height:424rpx;'/>
+        </swiper-item>
+        
+      </block>
+    </swiper>
+    <view class='lucky-bag'>
+      <image src='../../images/home_bg_sec@1x.png'></image>
+      <view class='mid-box' bindtap='popShow_on'>
+          <text>点开福袋有惊喜哦!</text>
+          <image class='mid-img' src='../../images/home_photo_bag@1x.png'></image>
+      </view>
+      
+    </view>
+    <!-- 列表 -->
+    <view class='list'>
+        <view class='list-item' wx:for="{{listData}}" wx:for-item="one" wx:if="{{one.storeVos.length>0}}" >
+            <view class='title'>
+              <text class='name-text'>{{one.name}}</text>
+              <view class='more-btn' bindtap='listHref' data-id="{{one.id}}">
+                  更多
+                  <image src='../../images/home_icon_pull@2x.png'></image>
+              </view>
+            </view>
+            <view class='content'>
+                 <block wx:for="{{one.storeVos}}" >
+                     <view class='item' id="{{item.id}}" bindtap='tickedHref'>
+                        <view class='img-box'>
+                            <image src='{{item.imageUrl}}'></image>
+                        </view>
+                        <text>{{item.name}}</text>
+                    </view> 
+                 </block>
+                 
+                
+            </view>
+        </view>
+      
+    </view>
+    <view class='layer' wx:if="{{layerShow}}" bindtap='popShow_off'></view>
+</scroll-view>
+<!-- 福袋 -->
+<view class='pop' wx:if="{{popShow}}">
+    <image class='open-img' src='../../images/home_photo_bag@3x.png'></image>
+    <button style='position: absolute;height: 296rpx;display:block;margin:0;padding:0;width:100%;top:0;left:0;z-index:10;background-color:transparent;border:0;' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+    <image class='off-btn' src='../../images/home_open_close@3x.png' bindtap='popShow_off'></image>
+</view>
+<view class='coupon pop' wx:if="{{couponPop}}">
+    <view class='top'>
+         <view class='icon'></view>
+         <view class='text'wx:if="{{couponData.length>0}}">您已获得如下优惠券</view>
+         <block wx:for="{{couponData}}">
+              <text>{{item.name}}{{item.type}}一张</text>
+              
+         </block>
+          <block wx:if="{{couponData.length==0}}">
+              <text style='font-size:32rpx'>您已经领取过福袋了</text>
+              
+         </block>
+         
+    </view>
+    
+    <image class='off-btn' src='../../images/home_open_close@3x.png' bindtap='couponPop_off'></image>
+</view>
+<!-- 扫一扫 -->
+<view class='sweep-btn' bindtap='RichScan'><image src='../../images/home_icon_scan@2x.png' mode='middle'></image></view>

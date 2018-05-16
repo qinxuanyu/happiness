@@ -1,0 +1,26 @@
+
+     <view class='top-tab'>
+            <view class="{{topTab==1?'active':''}}" bindtap='topTabFun' data-num="1">未使用</view>
+            <view class="{{topTab==2?'active':''}}"  bindtap='topTabFun' data-num="2">已使用</view>
+            <view class="{{topTab==3?'active':''}}"  bindtap='topTabFun' data-num="3">已过期</view>
+    </view>
+  
+     <view class='list'>
+       
+     <block wx:for="{{listData}}" >
+        <view class='item clearfix'  bindtap='goQrCode' id="{{item.id}}">
+          <view class='img-box'>
+              <image src='{{item.imageUrl}}' mode="aspectFit"></image>
+          </view>
+          <view class='text '>
+                <text class='name'>{{item.name }}</text>
+                <text>{{item.ticketType}}
+                <text class='number' wx:if="{{item.ticketType=='折扣券'}}">{{item.price }}折</text>
+                <text class='number' wx:else>￥{{item.price }}</text> 
+                </text>
+          </view>
+          <text class='time' wx:if="{{item.startTime!=null }}">有效期：{{item.startTime }}~{{item.endTime}}</text>
+          <text class='time' wx:else>有效期：永久</text>
+        </view>
+        </block>
+      </view>

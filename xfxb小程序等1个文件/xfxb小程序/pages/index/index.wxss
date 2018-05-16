@@ -1,0 +1,31 @@
+/* pages/index/index.wxss */
+scroll-view{position: absolute;top: 0;height: 0;height: 100%; }
+.swiper image{width: 100%;}
+/* swiper{height: auto} */
+.lucky-bag{position: relative;margin-top: 20rpx}
+.lucky-bag image{width: 100%;height: 276rpx}
+.lucky-bag .mid-box{width: 270rpx;height:210rpx;position: absolute;font-size: 28rpx;margin: auto;left: 0;bottom: 0;right: 0;top: 0;text-align: center}
+.lucky-bag .mid-box text{color: #fff;font-family: "微软雅黑"}
+.lucky-bag .mid-box image{width: 175rpx;height: 165rpx;margin: 0 auto;display: block;margin-top:10px}
+.list{}
+.list .list-item{background-color: #fff;margin-bottom: 20rpx;padding: 0 40rpx}
+.list .list-item .name-text{font-size: 18px;}
+.list .list-item .more-btn{float: right;}
+.list .list-item .title{font-size: 16px;color: #000;line-height: 40px}
+.list .list-item .more-btn image{width: 7.5px;height: 15px;float: right;margin-top: 12.5px;margin-left: 8px}
+.list .list-item .content{display: flex;justify-content: space-between;flex-wrap: wrap}
+.list .list-item .content .item{margin-bottom: 10px}
+.list .list-item .content .item .img-box{width: 318rpx;height: 160rpx;overflow: hidden;border: 2px solid #b2b2b2}
+.list .list-item .content .item .img-box image{width: 318rpx;height: 160rpx;}
+.list .list-item .content .item text{display:block;width:100%;text-align: center;font-size: 16px;line-height: 75rpx;}
+.pop{position: fixed;top: 0;left:0;bottom: 0;right: 0;margin: auto;width: 284rpx;height: 425rpx;z-index: 15;}
+.pop .open-img{width: 284rpx;height: 296rpx;display: block}
+.pop .off-btn{width: 65rpx;height: 65rpx;background-color: #fff;border-radius: 50%;display: block;margin: 48rpx auto 0 auto}
+.layer{position: fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 10;background: #1b1a1a;opacity: 0.5}
+.coupon{width: 422rpx;z-index: 16px;}
+.coupon .top{width: 422rpx;min-height: 200rpx;background-color: #ff2857;padding: 30rpx 0;box-sizing: border-box;border-radius: 15rpx;overflow: hidden;position: relative;}
+.coupon .text{font-size: 13px;color: #fff;text-align: center}
+.coupon text{font-size: 12px;color: #fff;display: block;text-align: center}
+.coupon .icon{width: 170rpx;height: 170rpx;border-radius: 50%;position: absolute;top: -85rpx;right: -85rpx;background-color: #ffdd28;border-radius: 50%}
+.sweep-btn{position: fixed;width: 120rpx;height: 120rpx;background: #fff;right: 20rpx;top: 590rpx;border-radius: 50%;border: 1px solid #999;}
+.sweep-btn image{width: 70rpx;height: 70rpx;margin: 25rpx 25rpx;}

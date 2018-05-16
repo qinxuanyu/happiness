@@ -1,0 +1,28 @@
+<view class='title'>{{data.name}}</view>
+<view class="container">  
+  <!-- 生成二维码 -->  
+  <view class="img-box">  
+      <canvas   
+                style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="qrcCanvas"/>  
+  </view>  
+</view>  
+<block wx:if="{{data.ticketType=='折扣券'}}">
+     <view style='text-align:center;color:#ff2d2e;background-color:#fff'>{{data.ticketType}}{{data.price}}折</view>
+</block> 
+<block wx:else>
+  <view style='text-align:center;color:#ff2d2e;background-color:#fff'>{{data.ticketType}}￥{{data.price}}</view>
+</block>
+
+<view class='explain' style='border-bottom:1px dashed #999;'>
+    <text>有效期</text>
+    <text wx:if="{{data.startTime!=null}}">{{data.startTime }}~{{data.endTime }}</text>
+    <text  wx:else>永久</text>
+</view>
+
+<view class='explain'>
+    <text>使用说明</text>
+    <text>{{data.priceDesc}}</text>
+    <text>{{data.businessDesc}}</text>
+  
+</view>
+

@@ -1,0 +1,16 @@
+<scroll-view scroll-y="true" bindscrolltolower="pullUp">
+
+    <view class='list-item'>
+        
+        <view class='content'>
+            <view class='item' wx:for="{{dataList}}" bindtap='list_href' id="{{item.id}}">
+                <view class='img-box'>
+                    <image src='{{item.imageUrl}}' mode="scaleToFill"></image>
+                </view>
+                <text>{{item.name}}</text>
+            </view>
+           
+        </view>
+    </view>
+
+</scroll-view>

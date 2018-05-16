@@ -1,0 +1,40 @@
+{
+  "pages": [
+   
+    "pages/index/index",
+    "pages/myCenter/myCenter",
+    "pages/ticked/ticked",
+    "pages/qrcode/qrcode",
+    "pages/list/list"
+   
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "幸福向北",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#ff2d2e",
+    "backgroundColor": "#f5f5f5",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home_icon_home_def@3x.png",
+        "selectedIconPath": "images/home_icon_home_sel@3x.png"
+      },
+      {
+        "pagePath": "pages/myCenter/myCenter",
+        "text": "个人中心",
+        "iconPath": "/images/home_icon_me_def@3x.png",
+        "selectedIconPath": "images/home_icon_me_sel@3x.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+/* pages/ticket/ticked.wxss */
+.state{width: 20px;height: 20px;float: right;margin-right: 40rpx;margin-top: 30rpx;}
+.item{position: relative;width: 660rpx;height: 165rpx;margin: 0 auto;margin-top: 40rpx}
+.item image{position: absolute;width: 660rpx;height: 165rpx;left: 0;top: 0;z-index: -1;}
+.item .left{float: left;margin-top: 40rpx;width:195rpx;}
+.item text{display: block;color: #fff;font-size: 30rpx;text-align: center}
+.item .middle{float: left;margin-top: 20rpx;margin-left: 50rpx;width: 270rpx;}
+.item .middle .title{font-size: 30rpx;text-align: left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.item .middle .explain{font-size: 24rpx;text-align: left;display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+overflow: hidden;}
+.item .middle .time{font-size:22rpx;text-align: left}
+.item .right{float: right;width: 110rpx;height: 52rpx;background-color: #ffde28;color: #ff2857;font-size: 26rpx;text-align: center;line-height: 52rpx;border-radius:14rpx;margin-top: 58rpx;margin-right: 25rpx}
+
+.pop{position: fixed;top: 0;left:0;bottom: 0;right: 0;margin: auto;width: 540rpx;height: 700rpx;z-index: 15;}
+.pop .top{background-color: #fff;padding: 40rpx 50rpx;border-radius: 14rpx;font-size: 30rpx}
+.pop .top .title{display: block;font-size: 32rpx;color: #ff2857;text-align: center;margin-bottom: 34rpx;}
+.pop .open-img{width: 284rpx;height: 296rpx;display: block}
+
+.pop .off-btn{width: 65rpx;height: 65rpx;background-color: #fff;border-radius: 50%;display: block;margin: 48rpx auto 0 auto}
+.layer{position: absolute;width: 100%;height: 100%;left: 0;top: 0;z-index: 10;background: #1b1a1a;opacity: 0.5}
